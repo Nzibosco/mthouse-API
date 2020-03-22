@@ -6,3 +6,4 @@ application.properties
 /.settings
 /pom.xml
 logs
+target
