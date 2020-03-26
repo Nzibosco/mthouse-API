@@ -13,13 +13,8 @@ import java.util.Optional;
 @RequestMapping("/members")
 public class MembersController {
 
-    private MemberService memberService;
-
     @Autowired
-    public MembersController(MemberService ms){
-        super();
-        this.memberService = ms;
-    }
+    private MemberService memberService;
 
     @GetMapping(value = "/test", produces = MediaType.TEXT_PLAIN_VALUE)
     public String test () {

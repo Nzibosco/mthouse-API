@@ -11,22 +11,18 @@ import java.util.Optional;
 @Service
 public class MemberService {
 
+    @Autowired
     private MemberRepo memberRepo;
 
-    @Autowired
-    public MemberService(MemberRepo repo){
-        super();
-        this.memberRepo = repo;
-    }
 
     // login a member
-    @Transactional
+    @Transactional(readOnly = true)
     public Member authenticate (String email, String password){
         return memberRepo.findByEmailAndPassword(email, password);
     }
 
     // add a member to the database
-    @Transactional(readOnly = true)
+    @Transactional
     public Member addMember (Member m){
        return memberRepo.save(m);
     }
@@ -59,6 +55,7 @@ public class MemberService {
         return memberRepo.save(m);
     }
 
+    //delete a member
     @Transactional
     public void deleteMember(int id){
        memberRepo.deleteById(id);
