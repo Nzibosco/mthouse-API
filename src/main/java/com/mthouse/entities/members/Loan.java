@@ -15,4 +15,5 @@ public class Loan {
     private double amount;
     private double interest_rate;
     private double current_balance;
+    private LoanStatus loan_status;
 }
