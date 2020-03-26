@@ -36,6 +36,7 @@ public class MembersController {
         return memberService.addMember(member);
     }
 
+    // this controller will be used to update member details as well as changing their roles as need be.
     @PutMapping(value ="/update", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Member updateMemberDetails (@RequestBody Member m){
         return memberService.update(m);
