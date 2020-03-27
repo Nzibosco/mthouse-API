@@ -42,7 +42,7 @@ public class ContributionService {
     // member -specific contributions history
     @Transactional(readOnly = true)
     public Iterable<Contribution> contributionHistory (int member_id){
-        return contributionRepo.getHistory(member_id);
+        return contributionRepo.findByMemberId(member_id);
     }
 
     // delete a contribution

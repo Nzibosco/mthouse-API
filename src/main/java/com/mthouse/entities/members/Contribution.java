@@ -13,7 +13,7 @@ public class Contribution implements Serializable {
     private int id;
 
     @Column(nullable = false)
-    private int member_id;
+    private int memberId;
 
     @Column
     private LocalDateTime due_date;
