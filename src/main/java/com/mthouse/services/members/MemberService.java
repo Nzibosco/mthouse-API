@@ -24,6 +24,7 @@ public class MemberService {
     // add a member to the database
     @Transactional
     public Member addMember (Member m){
+        m.setJoinedDate();
        return memberRepo.save(m);
     }
 

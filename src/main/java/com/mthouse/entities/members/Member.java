@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity @Data @Setter @Getter
 public class Member implements Serializable {
@@ -38,6 +40,12 @@ public class Member implements Serializable {
     @Enumerated(EnumType.STRING)
     private Role member_role;
 
+    @Column(nullable = false)
+    private LocalDateTime date_joined;
+
+    @Column(nullable = false)
+    private double initial_contribution;
+
     @Enumerated(EnumType.STRING)
     private Status member_status;
 
@@ -47,5 +55,9 @@ public class Member implements Serializable {
 
     public void disableMember (){
         this.member_status = Status.DISABLED;
+    }
+
+    public void setJoinedDate(){
+        this.date_joined = LocalDateTime.now();
     }
 }
