@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 @Entity @Data @Getter @Setter
 public class Contribution implements Serializable {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(nullable = false)
