@@ -37,6 +37,11 @@ public class LoanService {
         return loanRepo.findAll();
     }
 
+    @Transactional (readOnly = true)
+    public Iterable<Loan> getLoanHistory(int memberId){
+       return loanRepo.findByMemberId(memberId);
+    }
+
     // helper function for web master to be able to delete a loan conveniently.
     @Transactional
     public void deleteALoan(int id){

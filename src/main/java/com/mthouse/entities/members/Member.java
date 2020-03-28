@@ -7,7 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
+
 
 @Entity @Data @Setter @Getter
 public class Member implements Serializable {
