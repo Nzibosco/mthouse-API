@@ -5,11 +5,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity @Data @Getter @Setter
-public class Accounting_record {
+public class Accounting_record implements Serializable {
 
     @Id @Column @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
