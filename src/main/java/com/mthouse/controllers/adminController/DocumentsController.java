@@ -1,4 +1,4 @@
-package com.mthouse.controllers.admin;
+package com.mthouse.controllers.adminController;
 
 import com.mthouse.entities.admin.Document;
 import com.mthouse.services.admin.DocumentService;

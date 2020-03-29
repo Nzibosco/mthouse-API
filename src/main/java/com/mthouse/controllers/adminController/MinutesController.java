@@ -1,4 +1,4 @@
-package com.mthouse.controllers.admin;
+package com.mthouse.controllers.adminController;
 
 import com.mthouse.entities.admin.Meeting_minute;
 import com.mthouse.services.admin.MinuteService;
