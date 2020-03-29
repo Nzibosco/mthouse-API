@@ -20,7 +20,7 @@ public class Business_line {
     @Column(nullable = false)
     private LocalDateTime date_created;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String line_name;
 
     @Column(nullable = false)

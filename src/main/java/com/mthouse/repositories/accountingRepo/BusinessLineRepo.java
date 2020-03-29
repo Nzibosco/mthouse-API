@@ -1,5 +1,8 @@
 package com.mthouse.repositories.accountingRepo;
 
 
-public class BusinessLineRepo {
+import com.mthouse.entities.accounting.Business_line;
+import org.springframework.data.repository.CrudRepository;
+
+public interface BusinessLineRepo extends CrudRepository<Business_line, Integer> {
 }
