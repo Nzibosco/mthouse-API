@@ -60,4 +60,8 @@ public class Member implements Serializable {
     public void setJoinedDate(){
         this.date_joined = LocalDateTime.now();
     }
+
+    public void setStatus (){
+        this.member_status = Status.ACTIVE;
+    }
 }

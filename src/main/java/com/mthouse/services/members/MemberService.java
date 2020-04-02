@@ -25,6 +25,7 @@ public class MemberService {
     @Transactional
     public Member addMember (Member m){
         m.setJoinedDate();
+        m.setStatus();
        return memberRepo.save(m);
     }
 
