@@ -3,8 +3,10 @@ package com.mthouse.repositories.membersRepo;
 import com.mthouse.entities.members.Member;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.Optional;
+
 
 public interface MemberRepo extends CrudRepository<Member, Integer> {
-    public Member findByEmailAndPassword (String email, String password);
+    public Optional<Member> findByEmailAndPassword (String email, String password);
 
 }

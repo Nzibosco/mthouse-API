@@ -17,7 +17,7 @@ public class MemberService {
 
     // login a member
     @Transactional(readOnly = true)
-    public Member authenticate (String email, String password){
+    public Optional<Member> authenticate (String email, String password){
         return memberRepo.findByEmailAndPassword(email, password);
     }
 

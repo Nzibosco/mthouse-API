@@ -48,7 +48,7 @@ public class MembersController {
     }
 
     @PostMapping(value = "/login", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Member login (@RequestBody Login login){
+    public Optional<Member> login (@RequestBody Login login){
         return memberService.authenticate(login.getEmail(), login.getPassword());
     }
 
