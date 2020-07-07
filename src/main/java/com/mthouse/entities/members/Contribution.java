@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 
-@Entity @Data @Getter @Setter
+@Entity @Data @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Contribution implements Serializable {
 
     @Id @Column
